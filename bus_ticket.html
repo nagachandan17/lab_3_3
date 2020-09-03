@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<script>
+		var adult=50;
+		var senior=30;
+		var child=20;
+		var x, y, z;
+		var total_cost;
+		function init()
+		{
+			x = document.getElementById("X");	
+			y = document.getElementById("Y");
+	    		z = document.getElementById("Z");
+		}
+		function cost()
+		{	
+			total_cost= adult*(x.value) + senior*(y.value) + child*(z.value);		
+			document.getElementById("cost").innerHTML = "Rs."+total_cost;
+		}
+	</script>
+	<style>
+	h1
+	{
+		font-size: 36px;     
+ 		color: green;
+ 		text-align: center; 
+ 		text-decoration: underline
+	}
+	body
+	{
+		font-size: 24px;     
+ 		color: blue;
+ 		text-align: center; 
+		font-family: verdana; 
+ 		font-weight: bold;
+ 	}
+	</style>	
+	<body onload="init()">
+		<h1> BUS TICKET BOOKING </h1>
+		<label for="X"> Enter the number of adults: </label>
+		<input type="text" id="X" size="20"/>
+		<br><br>
+		<label for="Y"> Enter the number of senior citizens: </label>
+		<input type="text" id="Y" size="20"/>
+		<br><br>
+		<label for="Z"> Enter the number of children: </label>
+		<input type="text" id="Z" size="20"/>	
+		<br><br>
+		<button onclick="cost()"> Calculate Cost </button>
+		<p> The total cost of tickets: </p>
+		<p id="cost"> </p>
+	</body>	
+</html>
